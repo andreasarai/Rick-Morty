@@ -23,4 +23,13 @@
    En el json obtenido se muestran una lista con todos los lugares que pertenecen a una dimensión desconocida. Este se encuentra dentro de la carpeta "json" en el  documento "dimensión_desconocida"
 
 
+4) Obtener listado de personajes nacidos en la Tierra.
+
+*Código:
+   https://rickandmortyapi.com/api/character/?origin=earth
+
+*json:
+   En el json obtenido se muestran una lista con todos los personajes nacidos en el planeta Tierra. Este se encuentra dentro de la carpeta "json" en el  documento "personajes_Tierra"
+
+
 
