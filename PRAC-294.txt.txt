@@ -5,3 +5,22 @@
 
 *json:
   En el json obtenido se muestran todos los personajes de género masculino. Se encuentra dentro de la carpeta "json" en el documento "genero_masculino.txt"
+
+2)Obtener el listado de personajes que hayan aparecido en el episodio 5
+
+*Código:
+   https://rickandmortyapi.com/api/episode/5
+
+*json:
+   En el json obtenido se muestran una lista con todos los personajes que aparecen en el episodio 5. Este se encuentra dentro de la carpeta "json" en el  documento "personajes_episodio5"
+
+3)Obtener listado de sitios que pertenecen a una dimensión desconocida
+
+*Código:
+   https://rickandmortyapi.com/api/location/?dimension=unknown
+
+*json:
+   En el json obtenido se muestran una lista con todos los lugares que pertenecen a una dimensión desconocida. Este se encuentra dentro de la carpeta "json" en el  documento "dimensión_desconocida"
+
+
+
