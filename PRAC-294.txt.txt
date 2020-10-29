@@ -39,6 +39,16 @@
 *json:
    En el json obtenido se muestran una lista con todos los personajes humanos que aparecen en el episodio 25.
 
+6) Con el listado obtenido de personas del episodio 5, muestra los humanos.
+
+*Código:
+   Se realizó en javaScript y se encuentra dentro de la carpeta js
+
+*json:
+   En el json obtenido se muestran una lista con todos los personajes humanos que aparecen en el episodio 5.
+
+
+
 
 
 
