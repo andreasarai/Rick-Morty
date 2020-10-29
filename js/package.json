@@ -1,0 +1,14 @@
+{
+  "name": "rickandmorty",
+  "version": "0.0.1",
+  "description": "ejercicios de práctica Rick and Morty",
+  "main": "ejercicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrea Pérez",
+  "license": "ISC",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}

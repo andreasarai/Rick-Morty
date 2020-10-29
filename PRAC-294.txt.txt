@@ -31,5 +31,14 @@
 *json:
    En el json obtenido se muestran una lista con todos los personajes nacidos en el planeta Tierra. Este se encuentra dentro de la carpeta "json" en el  documento "personajes_Tierra"
 
+5)Obtener listado de humanos que aparecen en el episodio 25
+
+*Código:
+   Se realizó en javaScript y se encuentra dentro de la carpeta js
+
+*json:
+   En el json obtenido se muestran una lista con todos los personajes humanos que aparecen en el episodio 25.
+
+
 
 
