@@ -97,4 +97,4 @@ async function ejercicio6 () {
     console.log(characterCap);
 }
 
-ejercicio5()
+ejercicio6()
