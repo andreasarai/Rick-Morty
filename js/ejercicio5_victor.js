@@ -6,6 +6,7 @@ async function connect(method,url){
         xhr.open(method, url);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
+                console.log(xhr)
                 resolve(xhr.responseText);
             } else {
                 reject({
@@ -25,54 +26,25 @@ async function connect(method,url){
 }
 
 /*
- Con el listado obtenido de personas del episodio 5, muestra los humanos.
+ Obtener listado de humanos que aparecen en el episodio 25
  */
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-async function connect(method,url){
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.onload = function () {
-            if (this.status >= 200 && this.status < 300) {
-                resolve(xhr.responseText);
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        xhr.onerror = function () {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            });
-        };
-        xhr.send();
-    });
-}
-
-/**
- * Con esta función creo una URL y un método y recorro la base de datos, la filtro y guardo los resultados en un arreglo
- */
-async function ejercicio6 () {
+async function ejercicio5 () {
     const url = 'https://rickandmortyapi.com/api/character/?species=human';
     const method ='GET';
     var sum = 0;
-    var data = [];
+    var result = [];
     var character = [];
     await connect(method, url)
         .then(respuesta => {
             var res = JSON.parse(respuesta);
-            data = res;
+            result = res;
         })
         .catch( error => console.log(error));
-    sum = data.results.length;
-        data.results.forEach(element=>{
-            character.push(element);
+    sum = result.results.length;
+        result.results.forEach(e=>{
+            character.push(e);
         })
-    for(i=0; i <= data.info.pages ;i++){
+    for(i=0; i <= result.info.pages ;i++){
         if(i > 1){
             var url_ = `https://rickandmortyapi.com/api/character/?page=${i}&species=human`;
             await connect(method, url_).then(
@@ -86,15 +58,19 @@ async function ejercicio6 () {
             )
         }
     }
+    // ¡¡¡console.log("suma final:", sum)
+    // console.log("tamaño personajes:",character.length);
     characterCap = [];
     character.forEach((e) => {
-        e.episode.forEach(episodio => {
-            if (episodio.includes('/5')) {
+        e.episode.forEach(a => {
+            if (a.includes('/25')) {
+                // console.log(e.name);
                 characterCap.push(e);
             }
         });
     }); 
     console.log(characterCap);
+    console.log("Personajes:", characterCap.length);
 }
 
 ejercicio5()
