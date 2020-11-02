@@ -47,6 +47,13 @@
 *json:
    En el json obtenido se muestran una lista con todos los personajes humanos que aparecen en el episodio 5.
 
+<<<<<<< HEAD
+=======
+7)Muestra un listado de lugares de origen de los personajes  que aparecen en el episodio 20.
+
+
+
+>>>>>>> fca6f4584b071f417bcbc1eabd249e5c54a10dd7
 
 
 
