@@ -27,23 +27,29 @@ async function connect(method,url){
 
 
 async function ejercicio7() {
-    var resultados = [];
-  await connect("get", "https://rickandmortyapi.com/api/character/?species=human").then(
-      respuesta => {
-          var res = JSON.parse(respuesta)
-         // console.log(res.results)
-          resultados.push(res.results)
-      } 
-  )
-  .catch(error => console.log(error))
-  //console.log(resultados)
-  for (var i = 0; i < resultados[0].length; i++) {
-      for(var j=0; j < resultados[0][i].episode.length; j++) {
-          if (resultados[0][i].episode[j].includes("/20")){
-              console.log(resultados[0][i])
-          }
-      }
-   }
+    const url = 'https://rickandmortyapi.com/api/episode/20';
+    const method ='GET';
+    var data = [];
+    var character = [];
+    await connect(method, url)
+        .then(respuesta => {
+            var res = JSON.parse(respuesta);
+            data = res;
+        })
+        .catch( error => console.log(error));
+        //console.log(data)
+    for(i=0; i<data.characters.length; i++){
+        await connect(method, data.characters[i])
+        .then(respuesta => {
+            var res = JSON.parse(respuesta);
+            character.push(res);
+        })
+        .catch( error => console.log(error));
+    }
+    //console.log(character)
+    for(i=0; i<character.length; i++){
+        console.log(character[i].origin)
+    }
 }
 
 ejercicio7()

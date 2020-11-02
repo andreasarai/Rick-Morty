@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-=======
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-async function connect(method,url){
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.onload = function () {
-            if (this.status >= 200 && this.status < 300) {
-                resolve(xhr.responseText);
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        xhr.onerror = function () {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            });
-        };
-        xhr.send();
-    });
-}
-
->>>>>>> fca6f4584b071f417bcbc1eabd249e5c54a10dd7
 /*
  Con el listado obtenido de personas del episodio 5, muestra los humanos.
  */
